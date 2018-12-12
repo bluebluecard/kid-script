@@ -1,6 +1,6 @@
 # this script is designed to find the overlaping region between input file,
 # which format like gff
-# this will be finished in a few days!
+
 a=[[1,4],[7,13],[2,50],[9,30],[22,100],[34,78],[55,76],[3,90],[7,15]]
 b=[[5,9],[-1,5],[6,13],[8,15],[3,9],[6,9],[2,8],[2,5],[9,77],[4,90]]
 
