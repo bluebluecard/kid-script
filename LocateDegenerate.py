@@ -33,11 +33,6 @@ def ReadScaf():
             info=line.strip().split()
             if info[2] == 'CDS' :
                 gene=info[-1].strip('Parent=').strip(';')
-                #if gene in gff :
-                #    gff[gene].append([int(info[3]),int(info[4])])
-                #else:
-                #    gff[gene]=[]
-                #    gff[gene].append([int(info[3]),int(info[4])])
                 Scaf[gene]=info[0]
     return Scaf
 
@@ -112,7 +107,7 @@ def SiteType(codon,position):
         twotype='0d'
     temp=[]
     for i in alternative:
-        NewSym=codon[0]+codon[1]+codon[2]
+        NewSym=codon[0]+codon[1]+i
         temp.append(GeneticCode[NewSym])
     if len(set(temp)) == 1 :
         threetype='4d'
